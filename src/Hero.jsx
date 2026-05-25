@@ -5,7 +5,7 @@ export default function Hero() {
       {/* Background image + overlay */}
       <div className="hero__bg">
         <img
-          src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1600&auto=format&fit=crop&q=80"
+          src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1600&auto=format&fit=crop&q=80"
           alt=""
           className="hero__bg-img"
         />

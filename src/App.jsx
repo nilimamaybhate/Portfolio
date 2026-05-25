@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import "./index.css";
+import Hero from "./Hero";
+import About from "./About";
+import Projects from "./Projects";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
@@ -44,10 +47,6 @@ function Navbar() {
     ))}
   </ul>
 
-  <a href="#" className="navbar__logo-wrap">
-    <img src="/public/assets/logo.png" alt="Nilima Maybhate" className="navbar__logo" />
-  </a>
-
   <div className="navbar__socials">
     <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noreferrer" aria-label="GitHub">
       <GitHubIcon />
@@ -65,14 +64,12 @@ export default function App() {
   return (
     <div className="app">
       <Navbar />
+      <Hero/>
+      <About/>
+      <Projects/>
       <main>
-        {/* Sections will go here */}
-        <section style={{ height: "100vh", display: "grid", placeItems: "center" }}>
-          <p style={{ color: "var(--text-muted)", fontFamily: "var(--font-body)" }}>
-            Hero section coming next...
-          </p>
-        </section>
-      </main>
+  {/* Sections will go here */}
+</main>
     </div>
   );
 }
