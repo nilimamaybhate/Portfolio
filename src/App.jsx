@@ -3,6 +3,9 @@ import "./index.css";
 import Hero from "./Hero";
 import About from "./About";
 import Projects from "./Projects";
+import Skills from "./Skills";
+import Experience from "./Experience";
+import Contact from "./Contact";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
@@ -56,6 +59,10 @@ function Navbar() {
     </a>
   </div>
 
+  <button className="navbar__burger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+        <span /><span /><span />
+      </button>
+
 </nav>
   );
 }
@@ -67,6 +74,9 @@ export default function App() {
       <Hero/>
       <About/>
       <Projects/>
+      <Skills/>
+      <Experience/>
+      <Contact/>
       <main>
   {/* Sections will go here */}
 </main>
