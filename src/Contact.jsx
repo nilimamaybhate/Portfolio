@@ -55,7 +55,7 @@ export default function Contact() {
             </div>
             <div>
               <span className="contact__label">GitHub</span>
-              <a href="https://github.com/yourusername" target="_blank" rel="noreferrer" className="contact__value">github.com/yourusername</a>
+              <a href="https://github.com/nilimamaybhate" target="_blank" rel="noreferrer" className="contact__value">github.com/nilimamaybhate</a>
             </div>
           </div>
 
@@ -67,7 +67,7 @@ export default function Contact() {
             </div>
             <div>
               <span className="contact__label">LinkedIn</span>
-              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer" className="contact__value">linkedin.com/in/yourusername</a>
+              <a href="https://www.linkedin.com/in/nilimamaybhate" target="_blank" rel="noreferrer" className="contact__value">linkedin.com/in/nilimamaybhate</a>
             </div>
           </div>
 
