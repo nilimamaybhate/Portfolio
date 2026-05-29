@@ -1,6 +1,27 @@
+import { useEffect, useRef } from "react";
+
+
+
 export default function Contact() {
+
+   const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("contact--visible");
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="contact section" id="contact">
+    <section className="contact section" id="contact" ref={sectionRef}>
 
       <span className="section__tag">Get In Touch</span>
       <h2 className="section__title">Let's <em>Connect</em></h2>
