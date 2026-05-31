@@ -123,7 +123,7 @@ export default function About() {
             <div className="about__card-body">
               <span className="about__card-label">Education</span>
               <p className="about__card-title">MSc Computer Science</p>
-              <p className="about__card-sub">Prof. Ramkrishna More College · 2025</p>
+              <p className="about__card-sub">Prof. Ramkrishna More College · 2026</p>
             </div>
           </div>
 
