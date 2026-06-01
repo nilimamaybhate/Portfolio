@@ -67,21 +67,17 @@ export default function Experience() {
           <div className="exp-card__body">
 
             <p className="exp-card__desc">
-              Worked as a Web Developer Intern and contributed to the development
-              of a full-stack e-commerce platform. Assisted in building responsive
-              UI components, integrating backend functionalities, and deploying the
-              project on Netlify while collaborating with the team throughout the
-              development process.
+              During my Web Development Internship at The Digitech Solutions, I worked on real-world client projects, developing responsive and user-friendly websites using HTML, CSS, JavaScript, and CMS platforms. My responsibilities included website maintenance, UI implementation, performance optimization, bug fixing, and collaborating with cross-functional teams to ensure high-quality project delivery.
             </p>
 
             {/* Highlights grid */}
             <ul className="exp-card__highlights">
               {[
-                "Built complete e-commerce platform using React, Node.js, and Neon DB",
-                "Designed and developed responsive UI with HTML, CSS, and JavaScript",
-                "Integrated backend APIs and managed database with PostgreSQL / Neon DB",
-                "Deployed and maintained the live application on Netlify",
-                "Collaborated with AI tools to accelerate development and problem-solving",
+                "Developed and maintained client websites using HTML, CSS, JavaScript, and CMS platforms",
+  "Built responsive and user-friendly web pages optimized for desktop and mobile devices",
+  "Identified and resolved technical issues while ensuring website functionality and performance",
+  "Collaborated with design and content teams to implement website updates and enhancements",
+  "Contributed to real-world client projects and gained hands-on experience in professional web development",
               ].map((item, i) => (
                 <li key={i} style={{ "--li": i }}>{item}</li>
               ))}

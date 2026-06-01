@@ -95,7 +95,7 @@ export default function About() {
           </p>
 
           <div className="about__actions">
-            <a href="/resume.pdf" className="btn btn--primary" target="_blank" rel="noreferrer">
+            <a href="/nilima-maybhate.pdf" className="btn btn--primary" target="_blank" rel="noreferrer">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" strokeWidth="2.5"
                 strokeLinecap="round" strokeLinejoin="round">

@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
   const sectionRef = useRef(null);
   const [submitted, setSubmitted] = useState(false);
   const [focused, setFocused] = useState(null);
+  const formRef = useRef();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -19,11 +21,28 @@ export default function Contact() {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    await emailjs.sendForm(
+      "service_ioeya5v",
+      "template_zir88k7",
+      formRef.current,
+      "CRg3tRtZAJ8NBMcYi"
+    );
+
     setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
-  };
+    e.target.reset();
+
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 3000);
+  } catch (error) {
+    console.error(error);
+    alert("Failed to send message.");
+  }
+};
 
   const INFO = [
     {
@@ -152,6 +171,7 @@ export default function Contact() {
           )}
 
           <form
+            ref={formRef}
             className={`contact__form ${submitted ? "contact__form--sent" : ""}`}
             onSubmit={handleSubmit}
           >
@@ -159,6 +179,7 @@ export default function Contact() {
               <div className={`contact__field ${focused === "name" ? "contact__field--focused" : ""}`}>
                 <label className="contact__field-label">Your Name</label>
                 <input type="text" className="contact__input"
+                  name="name"
                   placeholder="Jane Smith"
                   onFocus={() => setFocused("name")}
                   onBlur={() => setFocused(null)} />
@@ -166,6 +187,7 @@ export default function Contact() {
               <div className={`contact__field ${focused === "email" ? "contact__field--focused" : ""}`}>
                 <label className="contact__field-label">Your Email</label>
                 <input type="email" className="contact__input"
+                  name="email"
                   placeholder="jane@example.com"
                   onFocus={() => setFocused("email")}
                   onBlur={() => setFocused(null)} />
@@ -175,6 +197,7 @@ export default function Contact() {
             <div className={`contact__field ${focused === "subject" ? "contact__field--focused" : ""}`}>
               <label className="contact__field-label">Subject</label>
               <input type="text" className="contact__input"
+                name="subject"
                 placeholder="Job opportunity / Project collaboration"
                 onFocus={() => setFocused("subject")}
                 onBlur={() => setFocused(null)} />
@@ -183,6 +206,7 @@ export default function Contact() {
             <div className={`contact__field ${focused === "message" ? "contact__field--focused" : ""}`}>
               <label className="contact__field-label">Message</label>
               <textarea className="contact__input contact__textarea"
+                name="messege"
                 placeholder="Tell me about the role or what you have in mind..."
                 rows={5}
                 onFocus={() => setFocused("message")}

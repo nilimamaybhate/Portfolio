@@ -3,15 +3,15 @@ import { useEffect, useRef } from "react";
 const PROJECTS = [
   {
     number: "01",
-    title: "E-commerce Platform",
+    title: "Vedayura",
     role: "Web Developer Intern",
-    company: "DigiTech Solutions",
+    company: "The Digitech Solutions",
     description:
       "A full-stack e-commerce platform built during my internship at DigiTech Solutions. Led the development end-to-end — handling product listings, cart, orders, and overall user experience with a React frontend and Node.js backend connected to a Neon serverless database.",
     tags: ["React", "Node.js", "HTML", "CSS", "JavaScript", "Neon DB"],
     live: "https://vedayura1.netlify.app",
-    github: null,
-    featured: true,
+    github: null
+    
   },
   {
     number: "02",
@@ -22,9 +22,20 @@ const PROJECTS = [
       "A portfolio website designed and developed for a professional dietitian. Clean, minimal, and built with pure HTML, CSS, and JavaScript — focused on presenting services and building trust with potential clients.",
     tags: ["HTML", "CSS", "JavaScript"],
     live: "https://sattvabymrunmayee.netlify.app",
-    github: null,
-    featured: false,
+    github: null
+    
   },
+  {
+  number: "03",
+  title: "KUMSS",
+  role: "Web Developer Intern",
+  company: "The Digitech Solutions",
+  description:
+    "Developed and maintained the official website for KUMSS, an educational institution focused on rural development and skill-based learning. Worked on creating responsive, user-friendly interfaces, improving website structure, and presenting information about institutes, courses, and campus facilities in a modern and accessible way.",
+  tags: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+  live: "https://kumss.org",
+  github: null
+}
 ];
 
 export default function Projects() {
