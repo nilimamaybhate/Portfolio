@@ -862,6 +862,21 @@ img { display: block; max-width: 100%; }
 .prow--light .prow__tag { background: var(--bg-alt); color: var(--text-muted); border-color: var(--bg-dark); }
 
 .prow__right { display: flex; flex-direction: column; align-items: flex-end; gap: 1rem; }
+
+.prow__actions{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.prow__link--ghost{
+  opacity:1;
+}
+
+.prow__link--ghost:hover{
+  opacity:1;
+}
+
 .prow__badge {
   font-size: 0.62rem;
   font-weight: 700;

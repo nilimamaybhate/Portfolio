@@ -112,28 +112,63 @@ export default function Projects() {
               </div>
             </div>
 
-            {/* Right — link */}
-            <div className="prow__right">
-              {p.featured && (
-                <span className="prow__badge">Featured</span>
-              )}
-              {p.live && (
-                
-                  <a href={p.live}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="prow__link"
-                >
-                  <span>View Project</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" strokeWidth="2.5"
-                    strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="7" y1="17" x2="17" y2="7"/>
-                    <polyline points="7 7 17 7 17 17"/>
-                  </svg>
-                </a>
-              )}
-            </div>
+          {/* Right — links */}
+<div className="prow__right">
+
+  {p.featured && (
+    <span className="prow__badge">Featured</span>
+  )}
+
+  <div className="prow__actions">
+
+    {p.live && (
+      <a
+        href={p.live}
+        target="_blank"
+        rel="noreferrer"
+        className="prow__link"
+      >
+        <span>Live Demo</span>
+
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <line x1="7" y1="17" x2="17" y2="7"/>
+          <polyline points="7 7 17 7 17 17"/>
+        </svg>
+      </a>
+    )}
+
+    {p.github && (
+      <a
+        href={p.github}
+        target="_blank"
+        rel="noreferrer"
+        className="prow__link prow__link--ghost"
+      >
+        <span>GitHub</span>
+
+        <svg
+          width="15"
+          height="15"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.42-4.04-1.42-.55-1.4-1.34-1.77-1.34-1.77-1.1-.75.08-.74.08-.74 1.2.09 1.84 1.25 1.84 1.25 1.08 1.84 2.82 1.31 3.51 1 .11-.8.42-1.31.77-1.61-2.67-.31-5.47-1.33-5.47-5.94 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.56.12-3.24 0 0 1.01-.32 3.31 1.23a11.4 11.4 0 0 1 6.02 0c2.3-1.55 3.3-1.23 3.3-1.23.67 1.68.25 2.93.13 3.24.77.84 1.23 1.91 1.23 3.22 0 4.62-2.81 5.62-5.49 5.93.43.37.82 1.1.82 2.23v3.31c0 .32.22.7.83.58A12 12 0 0 0 12 .5z"/>
+        </svg>
+      </a>
+    )}
+
+  </div>
+
+</div>
 
           </div>
         ))}
