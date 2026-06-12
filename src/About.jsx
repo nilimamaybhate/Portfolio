@@ -79,7 +79,7 @@ export default function About() {
           <p className="about__body">
             I'm <strong>Nilima Maybhate</strong>, a fresh MSc Computer Science
             graduate from <strong>Prof. Ramkrishna More College, Akurdi</strong>.
-            I just wrapped up my final year exams and I'm ready to take everything
+           I recently completed my MSc Computer Science with a <strong>CGPA of 9.09 </strong> and I'm ready to apply my skills in real-world projects. and I'm ready to take everything
             I've learned and put it to real use.
           </p>
           <p className="about__body">
@@ -121,10 +121,14 @@ export default function About() {
               </svg>
             </div>
             <div className="about__card-body">
-              <span className="about__card-label">Education</span>
-              <p className="about__card-title">MSc Computer Science</p>
-              <p className="about__card-sub">Prof. Ramkrishna More College · 2026</p>
-            </div>
+  <span className="about__card-label">Education</span>
+  <p className="about__card-title">
+    MSc Computer Science · <span>CGPA 9.09/10</span>
+  </p>
+  <p className="about__card-sub">
+    Prof. Ramkrishna More College · 2026
+  </p>
+</div>
           </div>
 
           <div className="about__card">

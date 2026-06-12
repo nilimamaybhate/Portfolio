@@ -1,42 +1,62 @@
 import { useEffect, useRef } from "react";
 
 const PROJECTS = [
-  {
-    number: "01",
-    title: "Vedayura",
-    role: "Web Developer Intern",
-    company: "The Digitech Solutions",
-    description:
-      "A full-stack e-commerce platform built during my internship at DigiTech Solutions. Led the development end-to-end — handling product listings, cart, orders, and overall user experience with a React frontend and Node.js backend connected to a Neon serverless database.",
-    tags: ["React", "Node.js", "HTML", "CSS", "JavaScript", "Neon DB"],
-    live: "https://vedayura1.netlify.app",
-    github: null
-    
-  },
-  {
-    number: "02",
-    title: "Sattva by Mrunmayee",
-    role: "Freelance Developer",
-    company: "Independent Project",
-    description:
-      "A portfolio website designed and developed for a professional dietitian. Clean, minimal, and built with pure HTML, CSS, and JavaScript — focused on presenting services and building trust with potential clients.",
-    tags: ["HTML", "CSS", "JavaScript"],
-    live: "https://sattvabymrunmayee.netlify.app",
-    github: null
-    
-  },
-  {
-  number: "03",
-  title: "KUMSS",
-  role: "Web Developer Intern",
-  company: "The Digitech Solutions",
-  description:
-    "Developed and maintained the official website for KUMSS, an educational institution focused on rural development and skill-based learning. Worked on creating responsive, user-friendly interfaces, improving website structure, and presenting information about institutes, courses, and campus facilities in a modern and accessible way.",
-  tags: ["HTML", "CSS", "JavaScript", "Responsive Design"],
-  live: "https://kumss.org",
-  github: null
+{
+number: "01",
+title: "Sattva by Mrunmayee",
+role: "Freelance Developer",
+company: "Independent Project",
+description:
+"A portfolio website designed and developed for a professional dietitian. Clean, minimal, and built with pure HTML, CSS, and JavaScript — focused on presenting services and building trust with potential clients.",
+tags: ["HTML", "CSS", "JavaScript"],
+live: "https://sattvabymrunmayee.netlify.app",
+github: "https://github.com/nilimamaybhate/sattvaByMrunmayee"
+},
+
+{
+number: "02",
+title: "Task Manager App",
+role: "Full Stack Developer",
+company: "Personal Project",
+description:
+"A full-stack MERN task management application with JWT authentication, protected routes, and complete CRUD functionality. Includes task filtering, search, user authentication, and a responsive UI.",
+tags: [
+"React",
+"Node.js",
+"Express.js",
+"MongoDB",
+"JWT",
+"Tailwind CSS"
+],
+live: "https://task-manager-by-nilima.netlify.app/",
+github: "https://github.com/nilimamaybhate/task-manager"
+},
+
+{
+number: "03",
+title: "Personal Portfolio Website",
+role: null,
+company: null,
+description:
+"Designed and developed a responsive portfolio website to showcase projects, education, and contact information with smooth animations and modern UI.",
+tags: ["React", "CSS", "Javascript"],
+live: "https://nilima-maybhate.netlify.app/",
+github: "https://github.com/nilimamaybhate/Portfolio"
+},
+
+{
+number: "04",
+title: "Coming Soon",
+role: "Next Project",
+company: "In Progress",
+description:
+"Currently building a new project to explore modern web technologies and expand full-stack development skills. Stay tuned.",
+tags: ["Coming Soon"],
+live: null,
+github: null
 }
 ];
+
 
 export default function Projects() {
   const sectionRef = useRef(null);
